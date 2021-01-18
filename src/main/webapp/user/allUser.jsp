@@ -2,6 +2,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +19,8 @@
 	<%@ include file="/common/common_lib.jsp" %>
 	
 	<script src="/js/jquery/jquery-1.12.4.js"></script>
-	<link href="<%=request.getContextPath() %>/css/dashboard.css" rel="stylesheet">
-	<link href="<%=request.getContextPath() %>/css/blog.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath }/css/dashboard.css" rel="stylesheet">
+	<link href="${pageContext.request.contextPath }/css/blog.css" rel="stylesheet">
 </head>
 
 <body>
@@ -46,7 +47,7 @@
 									<th>사용자 별명</th>
 									<th>등록일시</th>
 								</tr>
-								<%
+								<%-- <%
 									List<UserVo> users = (List<UserVo>)request.getAttribute("userList"); 
 									for(UserVo vo : users){
 								%>
@@ -59,7 +60,17 @@
 								</tr>
 								<%
 									}
-								%>
+								%> --%>
+								<c:forEach items="${userList }" var="vo">
+									<tr>
+										<td>${vo.userid }</td>
+										<td>${vo.usernm }</td>
+										<td>${vo.alias }</td>
+										<td>${vo.getReg_dt_fmt() }</td>
+									</tr>
+								
+								</c:forEach>
+								
 							</table>
 						</div>
 				

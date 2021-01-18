@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h2>scope.jsp</h2>
-	<form action="<%=request.getContextPath() %>/scope" method="post">
+	<form action="${pageContext.request.contextPath }/scope" method="post">
 		<input type="text" name = "scope">
 		<input type="submit" value="전송">
 	</form>

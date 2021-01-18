@@ -11,14 +11,14 @@
 
    	<title>Login</title>
 
-<%--     <link href="<%=request.getContextPath() %>/css/bootstrap.min.css" rel="stylesheet"> --%>
+<%--     <link href="${pageContext.request.contextPath }/css/bootstrap.min.css" rel="stylesheet"> --%>
 
 	<%-- common_lib.jsp의 내용을 지금 기술되는 부분에 코드를 복사해서 붙여넣기 --%>
 	<%@ include file="/common/common_lib.jsp" %>
 	
 	<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
 	
-    <link href="<%=request.getContextPath() %>/css/signin.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath }/css/signin.css" rel="stylesheet">
 	
 	<script>
 		function getCookieValue(cookieStr, cookieName) {
@@ -95,7 +95,7 @@
 
     <div class="container">
 
-      <form class="form-signin" id="frm" action="<%=request.getContextPath() %>/loginController" method="post">
+      <form class="form-signin" id="frm" action="${pageContext.request.contextPath }/loginController" method="post">
       	<h2 class="form-signin-heading">Please sign in</h2>
         <label for="userid" class="sr-only">userid</label>
         <input type="text" name="userid" id="userid" class="form-control" placeholder="사용자 아이디" required autofocus>
