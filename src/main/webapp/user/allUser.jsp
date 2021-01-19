@@ -18,7 +18,6 @@
 
 	<%@ include file="/common/common_lib.jsp" %>
 	
-	<script src="/js/jquery/jquery-1.12.4.js"></script>
 	<link href="${pageContext.request.contextPath }/css/dashboard.css" rel="stylesheet">
 	<link href="${pageContext.request.contextPath }/css/blog.css" rel="stylesheet">
 </head>

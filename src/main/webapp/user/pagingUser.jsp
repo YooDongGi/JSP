@@ -19,7 +19,6 @@
 
 	<%@ include file="/common/common_lib.jsp" %>
 	
-	<script src="/js/jquery/jquery-1.12.4.js"></script>
 	<link href="${pageContext.request.contextPath }/css/dashboard.css" rel="stylesheet">
 	<link href="${pageContext.request.contextPath }/css/blog.css" rel="stylesheet">
 	
@@ -97,10 +96,8 @@
 										} else {
 								%>
 										<li><a href="${pageContext.request.contextPath }/pagingUser?page=<%=i %>&pageSize=<%=pageVo.getPageSize()%>"><%=i %></a></li>
-								
 								<%		}
 									}
-										
 								%> 
 								<li class="next"><a href="${pageContext.request.contextPath }/pagingUser?page=<%=pagination %>&pageSize=<%=pageVo.getPageSize()%>">»</a></li>
 								--%>

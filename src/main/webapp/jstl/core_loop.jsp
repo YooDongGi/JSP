@@ -30,7 +30,7 @@
 	--%>
 	<h3>일반 for문 형태</h3>
 	<c:forEach begin="0" end="10" var="i" varStatus="loop">
-		${i }번째 - 반복시킬 문장 ${loop.index } / ${loop.count }<br> 		
+		${i }번째 - 문장 ${loop.index } / ${loop.count }<br> 		
 	</c:forEach>
 	<hr><br>
 	
@@ -60,6 +60,11 @@
 		${ranger } / ${loop.index } / ${loop.count } <br> 
 	</c:forEach>
 	
+	<br><br>
+	<h3>forTokens</h3>
+	<c:forTokens items="홍길동,이순신,일지매" delims="," var="i">
+		${i} <br>
+	</c:forTokens>
 	<br><br>
 	
 	<h3>map 타입객체 루프를 통해 담겨진 값 확인하기</h3>
@@ -97,5 +102,6 @@
 	var 속성을 적용하지 않은 경우 : 태그를 작성한 곳에 출력 <c:url value="/userRegist"/> <br>
 	var 속성을 적용한 경우 : var 속성으로 저장만 된다(el을 통해 활용)<c:url value="/userRegist" var="url"/> <br>
 	${url }
+	
 </body>
 </html>
