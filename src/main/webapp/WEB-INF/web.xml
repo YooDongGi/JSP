@@ -66,6 +66,14 @@
 	</filter-mapping> -->
 
 
+	<listener>
+		<listener-class>kr.or.ddit.listener.ApplicationListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>kr.or.ddit.listener.LoginUserListener</listener-class>
+	</listener>
+	
+
 	<!-- error page 설정 -->
 	<error-page>
 		<error-code>404</error-code>

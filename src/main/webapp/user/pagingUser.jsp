@@ -19,8 +19,8 @@
 
 	<%@ include file="/common/common_lib.jsp" %>
 	
-	<link href="${pageContext.request.contextPath }/css/dashboard.css" rel="stylesheet">
-	<link href="${pageContext.request.contextPath }/css/blog.css" rel="stylesheet">
+	<link href="${cp }/css/dashboard.css" rel="stylesheet">
+	<link href="${cp }/css/blog.css" rel="stylesheet">
 	
 	<script>
 		// 문서 로딩이 완료되고 나서 실행되는 영역
@@ -38,7 +38,7 @@
 </head>
 
 <body>
-	<form id="frm" action="${pageContext.request.contextPath }/user">
+	<form id="frm" action="${cp }/user">
 		<input type="hidden" id="userid" name="userid" value=""/>
 	</form>
 	<%@ include file="/common/header.jsp" %>
@@ -75,14 +75,14 @@
 							</table>
 						</div>
 				
-						<a class="btn btn-default pull-right" href="${pageContext.request.contextPath }/registUser">사용자 등록</a>
+						<a class="btn btn-default pull-right" href="${cp }/registUser">사용자 등록</a>
 				
 						<div class="text-center">
 							<%-- <%
 							PageVo pageVo = ((PageVo)request.getAttribute("pageVo"));
 							%> --%>
 							<ul class="pagination">
-								<li class="prev"><a href="${pageContext.request.contextPath }/pagingUser?page=1&pageSize=${pageVo.pageSize }">«</a></li>
+								<li class="prev"><a href="${cp }/pagingUser?page=1&pageSize=${pageVo.pageSize }">«</a></li>
 								<%-- <%
 									// pagination 값이 4이므로 1부터 4까지 4번 반복된다
 									// 전체 사용자 수 : 16명  , 페이지 사이즈 : 4
@@ -95,11 +95,11 @@
 								<%	
 										} else {
 								%>
-										<li><a href="${pageContext.request.contextPath }/pagingUser?page=<%=i %>&pageSize=<%=pageVo.getPageSize()%>"><%=i %></a></li>
+										<li><a href="${cp }/pagingUser?page=<%=i %>&pageSize=<%=pageVo.getPageSize()%>"><%=i %></a></li>
 								<%		}
 									}
 								%> 
-								<li class="next"><a href="${pageContext.request.contextPath }/pagingUser?page=<%=pagination %>&pageSize=<%=pageVo.getPageSize()%>">»</a></li>
+								<li class="next"><a href="${cp }/pagingUser?page=<%=pagination %>&pageSize=<%=pageVo.getPageSize()%>">»</a></li>
 								--%>
 								<c:forEach begin="1" end="${userCnt }" var="i">
 									<c:choose>
@@ -107,11 +107,11 @@
 											<li class="active"><span>${i }</span></li>
 										</c:when>
 										<c:otherwise>
-											<li><a href="${pageContext.request.contextPath }/pagingUser?page=${i }&pageSize=${pageVo.pageSize }">${i }</a></li>
+											<li><a href="${cp }/pagingUser?page=${i }&pageSize=${pageVo.pageSize }">${i }</a></li>
 										</c:otherwise>
 									</c:choose>
 								</c:forEach>
-								<li class="next"><a href="${pageContext.request.contextPath }/pagingUser?page=${userCnt }&pageSize=${pageVo.pageSize }">»</a></li>
+								<li class="next"><a href="${cp }/pagingUser?page=${userCnt }&pageSize=${pageVo.pageSize }">»</a></li>
 							</ul>
 						</div>
 					</div>

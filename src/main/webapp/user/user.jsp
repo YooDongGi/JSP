@@ -19,20 +19,20 @@
 	<%@ include file="/common/common_lib.jsp" %>
 	
 	<script src="/js/jquery/jquery-1.12.4.js"></script>
-	<link href="${pageContext.request.contextPath }/css/dashboard.css" rel="stylesheet">
-	<link href="${pageContext.request.contextPath }/css/blog.css" rel="stylesheet">
+	<link href="${cp }/css/dashboard.css" rel="stylesheet">
+	<link href="${cp }/css/blog.css" rel="stylesheet">
 	<script>
 		$(function() {
 			// 수정버튼을 눌렀을 경우
 			$('#modifyBtn').on('click',function() {
 				$('#frm').attr("method", "GET");
-				$('#frm').attr("action", "${pageContext.request.contextPath }/userModify")
+				$('#frm').attr("action", "${cp }/userModify")
 				$('#frm').submit();
 			});
 			// 삭제버튼을 눌렀을 경우
 			$('#deleteBtn').on('click',function() {
 				$('#frm').attr("method", "POST");
-				$('#frm').attr("action", "${pageContext.request.contextPath }/deleteUser")
+				$('#frm').attr("action", "${cp }/deleteUser")
 				$('#frm').submit();
 			});
 		});
@@ -59,7 +59,7 @@
 					<div class="form-group">
 						<label for="userNm" class="col-sm-2 control-label">사용자 사진</label>
 						<div class="col-sm-10">
-							<img src="${pageContext.request.contextPath }/profile/${user.userid }.png"/>
+							<img src="${cp }/profile/${user.userid }.png"/>
 						</div>
 					</div>
 					

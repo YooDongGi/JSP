@@ -10,7 +10,7 @@
 	index.jsp
 	
 	webapp/image/brown.png
-	<img src="${pageContext.request.contextPath }/image/brown.png"/> <br>
+	<img src="${cp }/image/brown.png"/> <br>
 	
 </body>
 </html>

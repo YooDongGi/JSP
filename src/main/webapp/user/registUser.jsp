@@ -18,8 +18,8 @@
 	<%@ include file="/common/common_lib.jsp" %>
 	
 	<script src="/js/jquery/jquery-1.12.4.js"></script>
-	<link href="${pageContext.request.contextPath }/css/dashboard.css" rel="stylesheet">
-	<link href="${pageContext.request.contextPath }/css/blog.css" rel="stylesheet">
+	<link href="${cp }/css/dashboard.css" rel="stylesheet">
+	<link href="${cp }/css/blog.css" rel="stylesheet">
 	
 	<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 	<script>
@@ -63,7 +63,7 @@
 			
 				contextPath el
 				<%-- <form class="form-horizontal" role="form" action="<%=request.getContextPath()%>/registUser" method="POST"> --%>
-				<form class="form-horizontal" role="form" action="${pageContext.request.contextPath }/registUser" method="POST">
+				<form class="form-horizontal" role="form" action="${cp }/registUser" method="POST">
 					
 					<div class="form-group">
 						<label for="userNm" class="col-sm-2 control-label">사용자 아이디</label>
