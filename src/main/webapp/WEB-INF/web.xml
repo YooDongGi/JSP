@@ -38,7 +38,7 @@
 	</servlet-mapping>
 	
 	<!-- 필터 추가 -->
-	<filter>
+	<!-- <filter>
 		<filter-name>setEncodingFilter</filter-name>
 		<filter-class>kr.or.ddit.filter.EncodingFilter</filter-class>
 	</filter>
@@ -55,7 +55,7 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
-	<!-- 로그인 여부 체크 -->
+	로그인 여부 체크
 	<filter>
 		<filter-name>sessionCheckFilter</filter-name>
 		<filter-class>kr.or.ddit.filter.SessionCheckFilter</filter-class>
@@ -63,7 +63,7 @@
 	<filter-mapping>
 		<filter-name>sessionCheckFilter</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping> -->
 
 
 	<!-- error page 설정 -->
