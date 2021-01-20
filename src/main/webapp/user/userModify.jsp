@@ -57,9 +57,20 @@
 			
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 
-				<form class="form-horizontal" role="form" action="${cp }/userModify" method="POST">
+				<form class="form-horizontal" role="form" action="${cp }/userModify" method="POST" enctype="multipart/form-data">
 					
 					<input type="hidden" name="userid" value="${user.userid }"/>
+					<input type="hidden" name="filename" value="${user.filename }"/>
+					<input type="hidden" name="realfilename" value="${user.realfilename }"/>
+					
+					<div class="form-group">
+						<label for="userNm" class="col-sm-2 control-label">사용자 사진</label>
+						<div class="col-sm-8">
+							<img src="/profile?userid=${user.userid }"/>
+							<br><br>
+							<input type="file" id="profile" name="profile" />
+						</div>
+					</div>
 					
 					<div class="form-group">
 						<label for="userNm" class="col-sm-2 control-label">사용자 아이디</label>

@@ -17,7 +17,6 @@
 
 	<%@ include file="/common/common_lib.jsp" %>
 	
-	<script src="/js/jquery/jquery-1.12.4.js"></script>
 	<link href="${cp }/css/dashboard.css" rel="stylesheet">
 	<link href="${cp }/css/blog.css" rel="stylesheet">
 	
@@ -61,21 +60,14 @@
 			
 			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 			
-				contextPath el
-				<%-- <form class="form-horizontal" role="form" action="<%=request.getContextPath()%>/registUser" method="POST"> --%>
-				<form class="form-horizontal" role="form" action="${cp }/registUser" method="POST">
+				<form class="form-horizontal" role="form" action="${cp }/registUser" method="POST" enctype="multipart/form-data">
 					
 					<div class="form-group">
 						<label for="userNm" class="col-sm-2 control-label">사용자 아이디</label>
 						<div class="col-sm-8">
-						<%-- <% 
-							String userid = request.getParameter("userid");
-							userid = userid ==null ? "" : userid; 
-						%>
-							<input type="text" class="form-control" id="userid" name="userid" 
-												placeholder="사용자 아이디" value="<%=userid%>"> --%>
 							<input type="text" class="form-control" id="userid" name="userid" 
 												placeholder="사용자 아이디" value="${param.userid }">
+							<input type="file" name="profile" />
 						</div>
 					</div>
 
